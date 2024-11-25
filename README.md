@@ -37,6 +37,15 @@ conda activate latentsb
 📝 We are using diffusers for Stable Diffusion and its scheduler. Depending on the version of diffusers, outputs may vary slightly.
 
 ### Quick Start (Dog $\rightarrow$ Wild)
+
+Download pre-trained text embeddings from below link, and move them to ./embeddings.
+
+https://drive.google.com/drive/folders/19fsar77Ay6F82_nVKk9YDpqjjpaBsK0R?usp=sharing
+
+
+Then, run the below code:
+
+
 ```
 python sample.py --embedding_ckpt_0 embeddings/dog_1_0.pt --embedding_ckpt_1 embeddings/wild_1_0.pt
 ```
