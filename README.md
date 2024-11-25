@@ -46,6 +46,10 @@ You will get the same result as shown here:
 ![example](figures/example.png)
 
 
+> Question: Why are the results slightly different from the overview figure?
+> 
+> Answer: The overview results are taken from the middle of a for-loop, whereas this example is based on a single execution
+
 ### Textual Inversion
 This paper assume the unsupervised setting, indicating paired dataset and text description for each domain are not given. Thus, we optimize text embedding for each domain to compute source and target predictors.
 
@@ -65,6 +69,13 @@ Detailed arguments:
 --eval_freq (int)   : Optimization iteration to evaluate
 --name (str)        : Name of the domain
 ```
+
+You can sample using the optimized text embedding by:
+
+```
+python sample.py --embedding_ckpt_1 "<path to checkpoint>" --NFE 50 --scale 7.5 --method sample
+```
+
 
 ### Image-to-Image Translation
 
